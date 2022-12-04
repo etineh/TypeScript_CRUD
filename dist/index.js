@@ -18,11 +18,11 @@ function displayItems() {
 }
 function createTodo() {
     if (!check) {
-        itemArr[idStore] = inpVal.value;
-        check = true;
+        inpVal.value.length === 0 ? alert("field can't be empty") : itemArr[idStore] = inpVal.value;
+        inpVal.value.length !== 0 ? check = true : false;
     }
     else {
-        itemArr.push(inpVal === null || inpVal === void 0 ? void 0 : inpVal.value);
+        inpVal.value.length === 0 ? alert("field can't be empty") : itemArr.push(inpVal === null || inpVal === void 0 ? void 0 : inpVal.value);
     }
     displayItems();
 }
